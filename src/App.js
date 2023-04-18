@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { Calculadora } from './components/calculadora/calculadora';
+import {useSelector} from 'react-redux'
+import { ErrorWindows } from './components/error/error';
+import { MainWindow } from './components/GeneralStyles';
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const state = useSelector(state => state)
+  return(
+    <MainWindow>
+      {state.error ? <ErrorWindows /> : undefined}
+      <Calculadora />
+    </MainWindow>
+  )
 }
 
 export default App;
