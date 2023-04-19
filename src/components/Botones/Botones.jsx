@@ -76,6 +76,8 @@ export const Botones = (props) => {
                 <Buttons value={2} onClick={ingresarOperacion}>2</Buttons>
                 <Buttons value={3} onClick={ingresarOperacion}>3</Buttons>
                 <Buttons value={0} onClick={ingresarOperacion}>0</Buttons>
+                <Buttons value={0} onClick={ingresarOperacion}>0</Buttons>
+                <Buttons value={'.'} onClick={ingresarOperacion}>.</Buttons>
             </ContainerNums>
             <ContainerOperators>
                 <Buttons value={'+'} onClick={ingresarOperacion}>+</Buttons>
